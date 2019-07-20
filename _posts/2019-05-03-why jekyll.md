@@ -3,8 +3,8 @@ layout: post
 title: "Why Jekyll?"
 description:
 headline:
-modified: 2019-01-23
-category: webdevelopment
+modified: 2019-05-03
+category: Edu
 tags: [jekyll]
 imagefeature:
 mathjax:
