@@ -16,7 +16,7 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 # Owner/author information
 owner:
   name:           DoHyun Choi
-  avatar:         hmfaysal.jpg
+  avatar:         avatar.jpg
   email:          dohyen94@gmail.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:   Lacks always make Engine
