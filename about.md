@@ -57,6 +57,10 @@ This is my personal blog. It currently has {{ site.posts | size }} posts in {{ s
 * 송도 모 셋탑박스 업체와 협력하여 카메라 모듈 연동, TV프로그램 정보 조회 합동
   구현
 * Server, Android Application 개발 총괄  
+<figure>
+  <img src="{{ site.url }}/images/09.jpg" alt="아이 Eye">
+  <figcaption>아이 Eye</figcaption>
+</figure>
 
 ### 강의실 대여 시스템(CRM) 구현   
 *Team project*   
