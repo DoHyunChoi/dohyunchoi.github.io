@@ -9,7 +9,7 @@ imagefeature:
 mathjax:
 chart:
 comments: true
-
 ---
- well, I guess ut's quite obvious that I really enjoy working with Jekyll   
+
+well, I guess ut's quite obvious that I really enjoy working with Jekyll   
 **Heck, it's good**
