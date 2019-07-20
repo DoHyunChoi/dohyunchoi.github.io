@@ -48,7 +48,7 @@ This is my personal blog. It currently has {{ site.posts | size }} posts in {{ s
 ## EXPERIENCE
 
 #### 집에 혼자 있는 아이들의 TV 시청을 통제할 수 있는 시스템 구현   
-#### Team project     
+#### *Team project*     
 <sub>2018.08.07 - 11.20, [Github](https://github.com/dohyunchoi/), [Report](https://drive.google.com/file/d/13G662Hwn3H2UbMD0tupZN2hIXEp2DHCx/view?ths=true)</sub>
 * 집에 혼자 있는 아이들의 TV 시청을 통제할 수 있는 시스템
 * 미연령대 TV 프로그램 시청 방지,  시청시 카메라 모듈 사용, TV on/off, 모바일로                    
@@ -62,7 +62,7 @@ This is my personal blog. It currently has {{ site.posts | size }} posts in {{ s
 </figure>
 
 #### 스마트 IoT 농장 구현   
-#### personal project      
+#### *personal project*      
 <sub>2017.01.02 - 02.02, [Github](https://github.com/dohyunchoi/), [Report](https://docs.google.com/presentation/d/1sgk7-69xcvAEUmDIhw-RuviG0CwVM1gGk9APpYUqa4Q/edit#slide=id.p1)</sub>   
 * 이산화 탄소, 온도, 습도를 실시간으로 모바일로 모니터링 및 시스템 제어 기능 구현
 * ThingSpeak & MQTT Protocol을 이용하여 센서와 모바일 기기 사이 메시징 체제구현
@@ -73,7 +73,7 @@ This is my personal blog. It currently has {{ site.posts | size }} posts in {{ s
   
   
 ### 강의실 대여 시스템(CRM) 구현   
-### Team project      
+### *Team project*      
 <sub>2016.09.04 - 12.20, [Github](https://github.com/dohyunchoi/), [Report](https://docs.google.com/document/d/1R6VHGJOkyxnUBbDqYo-D69sheJ-ucjB4tPCfiQwUpfs/edit)</sub>
 * 학생들에게 실시간으로 사용가능한 강의실을 보여주고 예약할 수 있는 시스템
 * Use Case Diagram, Non-functional Requirements, Domain Model 등 
