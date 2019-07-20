@@ -66,7 +66,7 @@ This is my personal blog. It currently has {{ site.posts | size }} posts in {{ s
 <sub>2017.01.02 - 02.02, [Github](https://github.com/dohyunchoi/), [Report](https://docs.google.com/presentation/d/1sgk7-69xcvAEUmDIhw-RuviG0CwVM1gGk9APpYUqa4Q/edit#slide=id.p1)</sub>   
 * 이산화 탄소, 온도, 습도를 실시간으로 모바일로 모니터링 및 시스템 제어 기능 구현
 * ThingSpeak & MQTT Protocol을 이용하여 센서와 모바일 기기 사이 메시징 체제구현
-><figure>
+<figure>
   <img src="{{ site.url }}/images/10.png" alt="CNM_작물 모니터링">
   <figcaption>CNM_작물 모니터링</figcaption>
 </figure>
