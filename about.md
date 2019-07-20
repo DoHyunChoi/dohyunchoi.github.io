@@ -48,8 +48,7 @@ This is my personal blog. It currently has {{ site.posts | size }} posts in {{ s
 ### EXPERIENCE
 
 ### 집에 혼자 있는 아이들의 TV 시청을 통제할 수 있는 시스템 구현   
-*Team project*  
-================   
+### Team project     
 <sub>2018.08.07 - 11.20, [Github](https://github.com/dohyunchoi/), [Report](https://drive.google.com/file/d/13G662Hwn3H2UbMD0tupZN2hIXEp2DHCx/view?ths=true)</sub>
 * 집에 혼자 있는 아이들의 TV 시청을 통제할 수 있는 시스템
 * 미연령대 TV 프로그램 시청 방지,  시청시 카메라 모듈 사용, TV on/off, 모바일로                    
@@ -63,24 +62,23 @@ This is my personal blog. It currently has {{ site.posts | size }} posts in {{ s
 </figure>
 
 ### 강의실 대여 시스템(CRM) 구현   
-*Team project*   
-================   
+### Team project      
 <sub>2016.09.04 - 12.20, [Github](https://github.com/dohyunchoi/), [Report](https://docs.google.com/document/d/1R6VHGJOkyxnUBbDqYo-D69sheJ-ucjB4tPCfiQwUpfs/edit)</sub>
 * 학생들에게 실시간으로 사용가능한 강의실을 보여주고 예약할 수 있는 시스템
 * Use Case Diagram, Non-functional Requirements, Domain Model 등 
   S/W 설계에 필요한 분석적이고 체계적인 설계방식 구현       
 
 ### SKills
-Server, Android Application
+* Server, Android Application
 
 ### Language
-Android, Java, C
+* Android, Java, C
 
 ### Framework - 타 github 인용
 Pandas, NumPy, scikit-learn, KoNLPy, Spark, [PyTorch](https://github.com/newhiwoong/PyTorch), [TensorFlow](https://github.com/newhiwoong/TensorFlow), [Keras](https://github.com/newhiwoong/Keras-Applications)
 
 ### AI / ML
-오일석의 '[패턴인식](http://www.yes24.com/24/goods/3315437?scode=032&OzSrank=1)', 마이클 네그네빗스키의 ‘[인공지능 개론](http://www.yes24.com/24/Goods/9386454?Acode=101)’ 독학으로 전통적인 ML 분야 학습, Vision + NLP + Sequence Models - [Coursera 강의](https://www.coursera.org/learn/nlp-sequence-models) 수료 및 각종 프로젝트 진행, [강화학습](https://event-us.kr/modu/event/2016) + [Deep Generative](https://event-us.kr/modu/event/4648) 스터디를 통하여 학습 및 실습
+* 오일석의 '[패턴인식](http://www.yes24.com/24/goods/3315437?scode=032&OzSrank=1)', 마이클 네그네빗스키의 ‘[인공지능 개론](http://www.yes24.com/24/Goods/9386454?Acode=101)’ 독학으로 전통적인 ML 분야 학습, Vision + NLP + Sequence Models - [Coursera 강의](https://www.coursera.org/learn/nlp-sequence-models) 수료 및 각종 프로젝트 진행, [강화학습](https://event-us.kr/modu/event/2016) + [Deep Generative](https://event-us.kr/modu/event/4648) 스터디를 통하여 학습 및 실습
 
 
 <h2>Connect</h2>
