@@ -68,7 +68,7 @@ Server, Android Application
 ### Language
 Android, Java, C
 
-### Framework
+### Framework - 타 github 인용
 Pandas, NumPy, scikit-learn, KoNLPy, Spark, [PyTorch](https://github.com/newhiwoong/PyTorch), [TensorFlow](https://github.com/newhiwoong/TensorFlow), [Keras](https://github.com/newhiwoong/Keras-Applications)
 
 ### AI / ML
