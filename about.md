@@ -57,10 +57,21 @@ This is my personal blog. It currently has {{ site.posts | size }} posts in {{ s
   구현
 * Server, Android Application 개발 총괄  
 <figure>
+  <img src="{{ site.url }}/images/10.png" alt="CNM_작물 모니터링">
+  <figcaption>CNM_작물 모니터링</figcaption>
+</figure>
+
+### 스마트 IoT 농장 구현   
+### personal project      
+<sub>2017.01.02 - 02.02, [Github](https://github.com/dohyunchoi/), [Report](https://docs.google.com/presentation/d/1sgk7-69xcvAEUmDIhw-RuviG0CwVM1gGk9APpYUqa4Q/edit#slide=id.p1)</sub>   
+* 이산화 탄소, 온도, 습도를 실시간으로 모바일로 모니터링 및 시스템 제어 기능 구현
+* ThingSpeak & MQTT Protocol을 이용하여 센서와 모바일 기기 사이 메시징 체제구현
+<figure>
   <img src="{{ site.url }}/images/09.jpg" alt="아이 Eye">
   <figcaption>아이 Eye</figcaption>
 </figure>
-
+  
+  
 ### 강의실 대여 시스템(CRM) 구현   
 ### Team project      
 <sub>2016.09.04 - 12.20, [Github](https://github.com/dohyunchoi/), [Report](https://docs.google.com/document/d/1R6VHGJOkyxnUBbDqYo-D69sheJ-ucjB4tPCfiQwUpfs/edit)</sub>
@@ -74,7 +85,7 @@ This is my personal blog. It currently has {{ site.posts | size }} posts in {{ s
 ### Language
 * Android, Java, C
 
-### Framework - 타 github 인용
+### Framework - *other github 인용*
 Pandas, NumPy, scikit-learn, KoNLPy, Spark, [PyTorch](https://github.com/newhiwoong/PyTorch), [TensorFlow](https://github.com/newhiwoong/TensorFlow), [Keras](https://github.com/newhiwoong/Keras-Applications)
 
 ### AI / ML
