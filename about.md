@@ -48,7 +48,7 @@ This is my personal blog. It currently has {{ site.posts | size }} posts in {{ s
 ### EXPERIENCE
 
 ### 집에 혼자 있는 아이들의 TV 시청을 통제할 수 있는 시스템 구현   
-- *Team project*  
+*Team project*  
 ================   
 <sub>2018.08.07 - 11.20, [Github](https://github.com/dohyunchoi/), [Report](https://drive.google.com/file/d/13G662Hwn3H2UbMD0tupZN2hIXEp2DHCx/view?ths=true)</sub>
 * 집에 혼자 있는 아이들의 TV 시청을 통제할 수 있는 시스템
@@ -59,7 +59,7 @@ This is my personal blog. It currently has {{ site.posts | size }} posts in {{ s
 * Server, Android Application 개발 총괄  
 
 ### 강의실 대여 시스템(CRM) 구현   
-- *Team project*   
+*Team project*   
 ================   
 <sub>2016.09.04 - 12.20, [Github](https://github.com/dohyunchoi/), [Report](https://docs.google.com/document/d/1R6VHGJOkyxnUBbDqYo-D69sheJ-ucjB4tPCfiQwUpfs/edit)</sub>
 * 학생들에게 실시간으로 사용가능한 강의실을 보여주고 예약할 수 있는 시스템
