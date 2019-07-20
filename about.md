@@ -41,14 +41,14 @@ This is my personal blog. It currently has {{ site.posts | size }} posts in {{ s
 </figure>
 
 <!--## [INTRODUCTION]() 링크 만드는법 -->
-### INTRODUCTION
+## INTRODUCTION
 
 저의 목표는 모든 개인에게 맞춘 세상을 만드는 것입니다. 예를 들어 사람마다 소설이나 시 등의 글이나 여러 음악에는 어느 정도 양의 한계가 존재합니다. 자신이 좋아하는 작가의 글을 다 읽고 다음 글이 나올 때까지 몇 년 이상이 걸리는 경우도 있습니다. 우리는 같은 것을 계속해서 보는 것이 아닌 새로운 것을 보길 원합니다. 음악도 같습니다. 이는 작업 시간의 한계로 어쩔 수 없습니다. 이를 해결하기 위해 기존에 있는 글이나 음악을 DNN으로 사용자의 취향에 맞는 새로운 글이나 음악을 자체 생성을 해주며 더욱 개인화된 경험을 제공해주는 등 획일화된 서비스가 아닌 각각의 개인에게 맞춘 서비스를 제공하고 싶습니다.
 
-### EXPERIENCE
+## EXPERIENCE
 
-### 집에 혼자 있는 아이들의 TV 시청을 통제할 수 있는 시스템 구현   
-### Team project     
+#### 집에 혼자 있는 아이들의 TV 시청을 통제할 수 있는 시스템 구현   
+#### Team project     
 <sub>2018.08.07 - 11.20, [Github](https://github.com/dohyunchoi/), [Report](https://drive.google.com/file/d/13G662Hwn3H2UbMD0tupZN2hIXEp2DHCx/view?ths=true)</sub>
 * 집에 혼자 있는 아이들의 TV 시청을 통제할 수 있는 시스템
 * 미연령대 TV 프로그램 시청 방지,  시청시 카메라 모듈 사용, TV on/off, 모바일로                    
@@ -57,18 +57,18 @@ This is my personal blog. It currently has {{ site.posts | size }} posts in {{ s
   구현
 * Server, Android Application 개발 총괄  
 <figure>
-  <img src="{{ site.url }}/images/10.png" alt="CNM_작물 모니터링">
-  <figcaption>CNM_작물 모니터링</figcaption>
+  <img src="{{ site.url }}/images/09.jpg" alt="아이 Eye">
+  <figcaption>아이 Eye</figcaption>
 </figure>
 
-### 스마트 IoT 농장 구현   
-### personal project      
+#### 스마트 IoT 농장 구현   
+#### personal project      
 <sub>2017.01.02 - 02.02, [Github](https://github.com/dohyunchoi/), [Report](https://docs.google.com/presentation/d/1sgk7-69xcvAEUmDIhw-RuviG0CwVM1gGk9APpYUqa4Q/edit#slide=id.p1)</sub>   
 * 이산화 탄소, 온도, 습도를 실시간으로 모바일로 모니터링 및 시스템 제어 기능 구현
 * ThingSpeak & MQTT Protocol을 이용하여 센서와 모바일 기기 사이 메시징 체제구현
-<figure>
-  <img src="{{ site.url }}/images/09.jpg" alt="아이 Eye">
-  <figcaption>아이 Eye</figcaption>
+><figure>
+  <img src="{{ site.url }}/images/10.png" alt="CNM_작물 모니터링">
+  <figcaption>CNM_작물 모니터링</figcaption>
 </figure>
   
   
@@ -79,16 +79,16 @@ This is my personal blog. It currently has {{ site.posts | size }} posts in {{ s
 * Use Case Diagram, Non-functional Requirements, Domain Model 등 
   S/W 설계에 필요한 분석적이고 체계적인 설계방식 구현       
 
-### SKills
+## SKills
 * Server, Android Application
 
-### Language
+## Language
 * Android, Java, C
 
-### Framework - *other github 인용*
+## Framework - *other github 인용*
 Pandas, NumPy, scikit-learn, KoNLPy, Spark, [PyTorch](https://github.com/newhiwoong/PyTorch), [TensorFlow](https://github.com/newhiwoong/TensorFlow), [Keras](https://github.com/newhiwoong/Keras-Applications)
 
-### AI / ML
+## AI / ML
 * 오일석의 '[패턴인식](http://www.yes24.com/24/goods/3315437?scode=032&OzSrank=1)', 마이클 네그네빗스키의 ‘[인공지능 개론](http://www.yes24.com/24/Goods/9386454?Acode=101)’ 독학으로 전통적인 ML 분야 학습, Vision + NLP + Sequence Models - [Coursera 강의](https://www.coursera.org/learn/nlp-sequence-models) 수료 및 각종 프로젝트 진행, [강화학습](https://event-us.kr/modu/event/2016) + [Deep Generative](https://event-us.kr/modu/event/4648) 스터디를 통하여 학습 및 실습
 
 
