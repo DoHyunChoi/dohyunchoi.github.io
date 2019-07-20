@@ -45,7 +45,8 @@ This is my personal blog. It currently has {{ site.posts | size }} posts in {{ s
 
 저의 목표는 모든 개인에게 맞춘 세상을 만드는 것입니다. 예를 들어 사람마다 소설이나 시 등의 글이나 여러 음악에는 어느 정도 양의 한계가 존재합니다. 자신이 좋아하는 작가의 글을 다 읽고 다음 글이 나올 때까지 몇 년 이상이 걸리는 경우도 있습니다. 우리는 같은 것을 계속해서 보는 것이 아닌 새로운 것을 보길 원합니다. 음악도 같습니다. 이는 작업 시간의 한계로 어쩔 수 없습니다. 이를 해결하기 위해 기존에 있는 글이나 음악을 DNN으로 사용자의 취향에 맞는 새로운 글이나 음악을 자체 생성을 해주며 더욱 개인화된 경험을 제공해주는 등 획일화된 서비스가 아닌 각각의 개인에게 맞춘 서비스를 제공하고 싶습니다.
 
-## EXPERIENCE
+## [EXPERIENCE]()
+### 
 
 ### 집에 혼자 있는 아이들의 TV 시청을 통제할 수 있는 시스템 구현  - *Team project*
 <sub>2018.08.07 - 11.20, [Github](https://github.com/dohyunchoi/), [Report](https://drive.google.com/file/d/13G662Hwn3H2UbMD0tupZN2hIXEp2DHCx/view?ths=true)</sub>
