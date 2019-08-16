@@ -60,8 +60,8 @@ A클래스가 있는 workspace 디렉토리와, B클래스가 있는 workspace/b
 두 경로를 구분해주는 것은 세미콜론(;) 되시겠다.
 
 **>> set classpath=경로1;경로2
-Ex)
->> set classpath=C:\workspace;C:\workspace\bbb**
+**Ex)
+**>> set classpath=C:\workspace;C:\workspace\bbb**
 근데, 디렉토리 세계에서 마침표(.)는 현재 디렉토리를 의미한다.
 그래서 내가 지금 명령 프롬프트 상에서 위치한 디렉토리를 클래스 패스로 지정하고싶다 하면
 
