@@ -93,4 +93,4 @@ A클래스가 있는 workspace 디렉토리와, B클래스가 있는 workspace/b
 그것들이 모여있는 위치가 'bin'폴더이기 때문에 꼭 여기까지 써주어야 한다는 사실을 기억하자.
 
 
-[java 클래스패스와 환경변수설정](https://wanzargen.tistory.com/28)
+###### 출처 : [java 클래스패스와 환경변수설정](https://wanzargen.tistory.com/28)
