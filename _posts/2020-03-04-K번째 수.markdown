@@ -80,6 +80,8 @@ class Solution {
 
 
 import java.util.Arrays;
+
+
 class Solution {
     public int[] solution(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
