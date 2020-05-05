@@ -1,16 +1,7 @@
 ---
 layout: post
-title: "프로그래머스"        
-
-
-
-title: "코딩테스트 Level 1 문제      
-
-
-
-완주하지 못한 선수"
-
-description:
+title: "프로그래머스 코딩테스트 Level 1 문제"      
+description: "완주하지 못한 선수"
 headline:
 modified: 2020-03-04
 category: Java
