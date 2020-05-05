@@ -39,10 +39,7 @@ array	commands	return
 
 
 ## 2. 내 코드    
-
-
-
-
+```
 import java.util.*;
 import java.util.Arrays;
 
@@ -72,11 +69,13 @@ class Solution {
     }
 }
 
+```
 
+  
 ## 3. 베스트 답안지   
 
 
-
+```
 import java.util.Arrays;  
 
 
@@ -95,8 +94,7 @@ class Solution {
     }
 }
 
-
-
+```
 
 
 ##### 실행결과
