@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "프로그래머스        
+title: "프로그래머스"        
 
 
 
-코딩테스트 Level 1 문제      
+title: "코딩테스트 Level 1 문제      
 
 
 
