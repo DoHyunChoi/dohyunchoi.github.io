@@ -109,7 +109,7 @@ map.put("호랑이" , "힘80")
 
 출처: https://arabiannight.tistory.com/entry/자바Java-자바-HashMap-이란 [아라비안나이트]
 
-##### getOrDefault 
+##### getOrDefault 매소드
 
 default V getOrDefault(Object key, V defaultValue)
 
