@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "프로그래머스 코딩테스트 Level 1 문제 - K번째 수"
+title: "프로그래머스<br>코딩테스트 Level 1 문제<br>K번째 수"
 description:
 headline:
 modified: 2020-03-04
