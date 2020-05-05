@@ -1,0 +1,124 @@
+---
+layout: post
+title: "프로그래머스     
+
+코딩테스트 Level 1 문제  
+
+
+완주하지 못한 선수"
+description:
+headline:
+modified: 2020-03-15
+category: Java
+tags: [Programming]
+imagefeature:
+mathjax:
+chart:
+comments: true
+featured: true
+---
+
+
+## 1. 문제
+
+동명이인 상황시 문제를 완벽하게 해결하지 못하여 구글을 검색하여 참고하였다.
+
+문제 설명
+수많은 마라톤 선수들이 마라톤에 참여하였습니다. 단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.
+
+마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴 배열 completion이 주어질 때, 완주하지 못한 선수의 이름을 return 하도록 solution 함수를 작성해주세요.
+
+제한사항
+마라톤 경기에 참여한 선수의 수는 1명 이상 100,000명 이하입니다.
+completion의 길이는 participant의 길이보다 1 작습니다.
+참가자의 이름은 1개 이상 20개 이하의 알파벳 소문자로 이루어져 있습니다.
+참가자 중에는 동명이인이 있을 수 있습니다.
+입출력 예
+participant	completion	return
+[leo, kiki, eden]	[eden, kiki]	leo
+[marina, josipa, nikola, vinko, filipa]	[josipa, filipa, marina, nikola]	vinko
+[mislav, stanko, mislav, ana]	[stanko, ana, mislav]	mislav
+입출력 예 설명
+예제 #1
+leo는 참여자 명단에는 있지만, 완주자 명단에는 없기 때문에 완주하지 못했습니다.
+
+예제 #2
+vinko는 참여자 명단에는 있지만, 완주자 명단에는 없기 때문에 완주하지 못했습니다.
+
+예제 #3
+mislav는 참여자 명단에는 두 명이 있지만, 완주자 명단에는 한 명밖에 없기 때문에 한명은 완주하지 못했습니다.
+
+
+## 2. 내 코드 
+
+
+import java.util.*;
+class Solution {
+    public String solution(String[] participant, String[] completion) {
+        Arrays.sort(participant);
+        Arrays.sort(completion);
+        int i;
+        for ( i=0; i<completion.length; i++){
+
+            if (!participant[i].equals(completion[i])){
+                return participant[i];
+            }
+        }
+        return participant[i];
+    }
+}
+
+
+### 내림차순 정렬 후 참가자 명단과 완주자 명단이 일치하지 않으면 return한다.
+
+
+
+## 3. 베스트 답안지
+
+##### (HashMap을 이용한 답안지)
+
+import java.util.HashMap;
+
+class Solution {
+    public String solution(String[] participant, String[] completion) {
+        String answer = "";
+        HashMap<String, Integer> hm = new HashMap<>();
+        for (String player : participant) hm.put(player, hm.getOrDefault(player, 0) + 1);
+        for (String player : completion) hm.put(player, hm.get(player) - 1);
+
+        for (String key : hm.keySet()) {
+            if (hm.get(key) != 0){
+                answer = key;
+            }
+        }
+        return answer;
+    }
+}
+
+
+##### 실행결과
+<img src="{{ site.url }}/images/Wan1.jpg">  
+
+
+
+## 4. 보완
+
+#### HashMap
+HashMap이란 Map인터페이스의 한종류로써 Key와 Value 값으로 데이터를 저장하는 형태를 가지고 있습니다.
+HashMap에서 한가지 주의 하실 점이 map에 데이터를 등록할 때 , key값은 중복이 되지 않고 , value값은 중복이 허용된다는 점입니다. 예를들어,
+
+map.put("호랑이" , "힘90")
+map.put("여우" , "힘90")
+map.put("호랑이" , "힘80")
+(최종 호랑이 key에 저장된 value는 "힘80"으로 나중에 입력된 key의 value로 덮어 씌어 집니다.)
+
+출처: https://arabiannight.tistory.com/entry/자바Java-자바-HashMap-이란 [아라비안나이트]
+
+##### getOrDefault
+
+default V getOrDefault(Object key, V defaultValue)
+
+찾는 키가 존재한다면 찾는 키의 값을 반환하고 없다면 기본 값을 반환한다.
+
+위의 소스 처럼 중복된 값인 "mislav"을 찾고자 하는 키가 있으므로 1을 return한 후 +1을 해서 2가 된 모습이다.
+중복값이 없다면 +1-1 = 0 값이 나오지만 "mislav" 과 같이 중복값은 +2-1 = 1값이 나오므로 return 해준다.
