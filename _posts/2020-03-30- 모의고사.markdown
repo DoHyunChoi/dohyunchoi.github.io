@@ -1,0 +1,195 @@
+---
+layout: post
+title: "프로그래머스 코딩테스트 Level 1 문제<br>모의고사"     
+description: 
+headline:
+modified: 2020-03-30
+category: Java
+tags: [Programming]
+imagefeature:
+mathjax:
+chart:
+comments: true
+featured: true
+---
+
+
+## 1. 문제
+
+수포자는 수학을 포기한 사람의 준말입니다. 수포자 삼인방은 모의고사에 수학 문제를 전부 찍으려 합니다. 수포자는 1번 문제부터 마지막 문제까지 다음과 같이 찍습니다.
+
+1번 수포자가 찍는 방식: 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, ...
+2번 수포자가 찍는 방식: 2, 1, 2, 3, 2, 4, 2, 5, 2, 1, 2, 3, 2, 4, 2, 5, ...
+3번 수포자가 찍는 방식: 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, ...
+
+1번 문제부터 마지막 문제까지의 정답이 순서대로 들은 배열 answers가 주어졌을 때, 가장 많은 문제를 맞힌 사람이 누구인지 배열에 담아 return 하도록 solution 함수를 작성해주세요.
+
+제한 조건
+  - 시험은 최대 10,000 문제로 구성되어있습니다.
+  - 문제의 정답은 1, 2, 3, 4, 5중 하나입니다.
+  - 가장 높은 점수를 받은 사람이 여럿일 경우, return하는 값을 오름차순 정렬해주세요.
+
+입출력 예
+| answers | return |
+|---|:---:|---:|
+[1,2,3,4,5] | 	[1]
+[1,3,2,4,2]	| [1,2,3]
+
+
+## 2. 내 코드 
+
+```
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] answers) {
+        int[] student1 = {1,2,3,4,5};
+        int[] student2 = {2,1,2,3,2,4,2,5};
+        int[] student3 = {3,3,1,1,2,2,4,4,5,5};
+        
+        int cnt1 = 0; int cnt2 = 0; int cnt3 = 0;
+        
+        for(int i=0; i<answers.length; i++) {
+            if(student1[i%(student1.length)] == answers[i])
+                cnt1 ++;
+            }
+        for(int i=0; i<answers.length; i++) {
+            if(student2[i%(student2.length)] == answers[i])
+                cnt2 ++;
+            }
+        for(int i=0; i<answers.length; i++) {
+            if(student3[i%(student3.length)] == answers[i])
+                cnt3 ++;
+            }
+        
+        int big = (cnt1>cnt2) && (cnt1>cnt3) ? cnt1: (cnt3>cnt2?cnt3:cnt2);
+        int flag = 0;
+        if(big == cnt1)
+            flag++;
+        if(big == cnt2)
+            flag++;
+        if(big == cnt3)
+            flag++;
+        
+        int[] answer = new int[flag];
+        
+        int j = 0;
+            if(big==cnt1) {
+                answer[j] += 1;
+                j++;
+            }
+            if(big==cnt2) {
+                answer[j] += 2;
+                j++;
+            }
+            if(big==cnt3) {
+                answer[j] += 3;
+                j++;
+            }
+        
+        return answer;
+    }
+}
+```
+  
+###### 학생들 정답은 반복되므로 배열에 넣어 % 나머지 값을 정답과 비교한다.   
+
+
+  
+## 3. 베스트 답안지
+
+##### (ArrayList를 이용한 답안지)
+
+```
+import java.util.ArrayList;
+class Solution {
+    public int[] solution(int[] answers) {
+        int[] answer = {};
+        int[] person1 = {1,2,3,4,5}; //이만큼씩 반복
+        int[] person2 = {2,1,2,3,2,4,2,5};
+        int[] person3 = {3,3,1,1,2,2,4,4,5,5};
+        int answer1=0, answer2 =0, answer3 =0;
+        
+        for(int i =0; i<answers.length; i++){
+            if(person1[i%person1.length] == answers[i]) answer1++;
+            if(person2[i%person2.length] == answers[i]) answer2++;
+            if(person3[i%person3.length] == answers[i]) answer3++;
+        }
+        int max = Math.max(Math.max(answer1, answer2),answer3); // max값 구하기
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        if(max==answer1) list.add(1); //max값이랑 같으면 넣는다.
+        if(max==answer2) list.add(2);
+        if(max==answer3) list.add(3);
+        
+        answer = new int[list.size()];
+        
+        for(int i =0; i<answer.length; i++) {
+        	answer[i] = list.get(i);
+        }
+        
+        return answer;
+    }
+}
+
+```
+
+ 
+##### 실행결과
+<img src="{{ site.url }}/images/MoTest1.jpg">  
+
+
+
+## 4. 보완
+
+#### ArrayList  
+
+ArrayList는 java.util.ArrayList에 포함되어 있으므로 아래와 같이 import 시켜줍니다.
+
+ 
+```  
+import java.util.*
+
+import java.util.ArrayList  
+
+``` 
+
+import 하였다면 아래와 같이 ArrayList 객체를 생성해줍니다.
+```
+ArrayList<Integer> arrayList = new ArrayList<>();
+```
+
+자바에서 배열을 선언하는 것처럼 List의 Size를 초기화해줄 필요가 없습니다.   
+배열처럼 고정된 크기를 가지는 것이 아니라 메모리가 허용하는 한 자동으로 ArrayList 크기는 동적으로 변경됩니다.   
+출처: https://arabiannight.tistory.com/entry/자바Java-자바-HashMap-이란 [아라비안나이트]
+
+##### 데이터 추가하기 - Add 매소드
+
+ArrayList에 데이터를 추가하는 방법은 add 메소드를 활용하는 방법입니다.  
+add 메소드를 사용하는 방식은 두 가지로 인자 정보를 하나만 넘기는 경우와 두 개를 넘기는 방법이 있습니다. 
+```
+boolean add(E e)
+void add(int index, E element)
+```  
+
+###### 실행결과
+<img src="{{ site.url }}/images/MoTest3.jpg">   
+<img src="{{ site.url }}/images/MoTest2.jpg">   
+
+- ArrayList 합치기 - addAll 매소드
+  ex) arrayList.addAll(arrayList2);
+ 
+- ArrayList 삭제 - remove 매소드
+  ex) arrayList.remove(index);
+
+##### 데이터 가져오기 - get, subLit 매소드
+```
+E get(int index)
+List<E> subLit(int fromIndex, int toIndex)
+```
+- ex) ArrayList<Integer> arrayList = new ArrayList<>();
+      List<Integer> list = arrayList.subList(1,3);
+      
+arrayList의 1번부터 2번(3번-1) 인덱스까지 가져오기
+###### 실행결과
+<img src="{{ site.url }}/images/MoTest4.jpg">   
+<img src="{{ site.url }}/images/MoTest5.jpg">   
