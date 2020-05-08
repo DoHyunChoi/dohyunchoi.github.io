@@ -160,7 +160,6 @@ ArrayList<Integer> arrayList = new ArrayList<>();
 
 자바에서 배열을 선언하는 것처럼 List의 Size를 초기화해줄 필요가 없습니다.   
 배열처럼 고정된 크기를 가지는 것이 아니라 메모리가 허용하는 한 자동으로 ArrayList 크기는 동적으로 변경됩니다.   
-출처: https://arabiannight.tistory.com/entry/자바Java-자바-HashMap-이란 [아라비안나이트]
 
 ##### 데이터 추가하기 - Add 매소드
 
@@ -175,13 +174,13 @@ void add(int index, E element)
 <img src="{{ site.url }}/images/MoTest3.jpg">   
 <img src="{{ site.url }}/images/MoTest2.jpg">   
 
-- ArrayList 합치기 - addAll 매소드
+###### ArrayList 합치기 - addAll 매소드   
   ex) arrayList.addAll(arrayList2);
  
-- ArrayList 삭제 - remove 매소드
+###### ArrayList 삭제 - remove 매소드   
   ex) arrayList.remove(index);
 
-##### 데이터 가져오기 - get, subLit 매소드
+#### 데이터 가져오기 - get, subLit 매소드
 ```
 E get(int index)
 List<E> subLit(int fromIndex, int toIndex)
@@ -193,3 +192,7 @@ arrayList의 1번부터 2번(3번-1) 인덱스까지 가져오기
 ###### 실행결과
 <img src="{{ site.url }}/images/MoTest4.jpg">   
 <img src="{{ site.url }}/images/MoTest5.jpg">   
+
+
+보완설명은 아래 출처를 통해 작성하였다.
+출처: [아라비안나이트_ArrayList] (https://lktprogrammer.tistory.com/113)
