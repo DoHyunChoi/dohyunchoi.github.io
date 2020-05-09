@@ -47,24 +47,55 @@ mislav는 참여자 명단에는 두 명이 있지만, 완주자 명단에는 �
 ## 2. 내 코드 
 
 ```
-import java.util.*;   
+import java.util.Arrays;
 class Solution {
     public String solution(String[] participant, String[] completion) {
-        Arrays.sort(participant);
-        Arrays.sort(completion);
-        int i;
-        for ( i=0; i<completion.length; i++){
-
-            if (!participant[i].equals(completion[i])){
-                return participant[i];
-            }
+        String answer = "";
+        int check = 0;
+        
+        for(int i=0; i<participant.length-1; i++) {
+            for(int j=i+1; j<participant.length; j++)
+                if(participant[i].equals(participant[j]))
+                    check++;
         }
-        return participant[i];
+        
+        if(check==0) {
+             for(int i=0; i<participant.length; i++) {
+            int cnt = 0;
+            int flag = 0;
+            for(int j=0; j<completion.length; j++) {
+              //  if(participant[i] != completion[j]) {
+                if(!participant[i].equals(completion[j])) { //==> 정상임
+                    cnt++; 
+                        }
+                    if(cnt == completion.length) 
+                         answer += participant[i]; 
+                    }        
+                }
+       
+            }
+            
+        else {
+            
+            Arrays.sort(participant);
+            Arrays.sort(completion);
+            int i;
+            for ( i=0; i<completion.length; i++){
+                if (!participant[i].equals(completion[i])){
+                    answer += participant[i];
+             }
+         }
+            
+        }
+
+        return answer;
     }
+
 }
 ```
   
-##### 내림차순 정렬 후 참가자 명단과 완주자 명단이 일치하지 않으면 return한다.   
+##### 참가자중 동명이인이 있을 경우, 내림차순 정렬 후 참가자 명단과 완주자 명단이 일치하지 않으면 return한다. 
+(결과는 20점! ㅠㅠ)
 
 
   
