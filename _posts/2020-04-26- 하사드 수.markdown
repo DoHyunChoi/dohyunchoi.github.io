@@ -128,15 +128,15 @@ int뿐만 아니라 byte, short, long, float, double 등 숫자와 관련된 타
 > Long.parseLong();<br>
 > Float.parseFloat();<br>
 > Double.parseDouble();<br>
-로 존재하고 있다.
+로 존재하고 있다.<br><br>
 <span style="color:red">(char는 parseChar()가 아니라 이 전에 알아봤던 charAt()이라는 녀석으로 존재하고 있다.)</span>       
 
-######결국 spilt() 매소드로 문자열을 배열에 하나씩 문자로 쪼개 넣고  
-######문자를 숫자로 바꾸어 합하는 방식이다.   
+###### 결국 spilt() 매소드로 문자열을 배열에 하나씩 문자로 쪼개 넣고  
+###### 문자를 숫자로 바꾸어 합하는 방식이다.   
 
 
-#######단, parseInt()는 String타입의 문자열이 무조건 숫자로만 이루어져 있어야 사용할 수 있다!!  
-#######a123과 같이 문자가 섞여있다면 변환이 불가능하고 에러를 발생시킨다.   
+####### 단, parseInt()는 String타입의 문자열이 무조건 숫자로만 이루어져 있어야 사용할 수 있다!!  
+####### a123과 같이 문자가 섞여있다면 변환이 불가능하고 에러를 발생시킨다.   
 
 보완설명은 아래 출처를 통해 작성하였다.
 출처: [5.Integer.parseInt(String 타입 값] (https://colossus-java-practice.tistory.com/32)   
