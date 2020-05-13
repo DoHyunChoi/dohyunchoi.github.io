@@ -25,12 +25,28 @@ s의 길이는 8000이하입니다.
 n은 1 이상, 25이하인 자연수입니다.
 
 입출력 예<br>
-<table width="300" border="2" align="center">  
-| s | n | result |
-|---|---|---|
-| "AB" | 1 | "BC"|
-| "z"  | 1 | "a" |
-|"a B z"| 4| "e F d"|
+<table width="300" border="2" align="center">
+    <tr>
+        <td>s</td>
+        <td>n</td>
+        <td>result</td>
+    </tr>
+    <tr>
+        <td>"AB"</td>
+        <td>1</td>
+        <td>"BC"</td>
+    </tr>
+    <tr>
+        <td>"z"</td>
+        <td>1</td>
+        <td>"a"</td>
+    </tr>
+    <tr>
+        <td>"a B z"</td>
+        <td>4</td>
+        <td>"e F d"</td>
+    </tr>   
+
 
 
 ## 2. 내 코드 
