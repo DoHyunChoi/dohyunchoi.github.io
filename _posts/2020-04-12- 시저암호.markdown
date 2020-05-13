@@ -25,7 +25,7 @@ s의 길이는 8000이하입니다.
 n은 1 이상, 25이하인 자연수입니다.
 
 입출력 예<br>
-<table width="300" border="2" align="center">
+<table width="100" border="2" align="center">
     <tr>
         <td>s</td>
         <td>n</td>
@@ -47,7 +47,7 @@ n은 1 이상, 25이하인 자연수입니다.
         <td>"e F d"</td>
     </tr>   
 
-
+</table>
 
 ## 2. 내 코드 
 
