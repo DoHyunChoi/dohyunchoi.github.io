@@ -1,0 +1,139 @@
+---
+layout: post
+title: "프로그래머스 코딩테스트 Level 1 문제<br>하샤드 수"     
+description: 
+headline:
+modified: 2020-04-26
+category: Java
+tags: [Programming]
+imagefeature:
+mathjax:
+chart: true
+comments: true
+featured: true
+---
+
+
+## 1. 문제
+
+양의 정수 x가 하샤드 수이려면 x의 자릿수의 합으로 x가 나누어져야 합니다. 예를 들어 18의 자릿수 합은 1+8=9이고, 18은 9로 나누어 떨어지므로 18은 하샤드 수입니다. 자연수 x를 입력받아 x가 하샤드 수인지 아닌지 검사하는 함수, solution을 완성해주세요.
+
+제한 조건
+x는 1 이상, 10000 이하인 정수입니다.
+
+입출력 예<br>
+<table width="150" border="2" align="center">
+    <tr>
+        <td style="text-align:center">arr</td>
+        <td style="text-align:center">return</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">"10"</td>
+        <td style="text-align:center">"true"</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">"12"</td>
+        <td style="text-align:center">"true"</td>
+    </tr>
+        <tr>
+        <td style="text-align:center">"11"</td>
+        <td style="text-align:center">"false"</td>
+    </tr>   
+    <tr>
+        <td style="text-align:center">"13"</td>
+        <td style="text-align:center">"false"</td>
+    </tr>   
+
+</table>
+   
+입출력 예 설명  
+- 입출력 예 #1   
+10의 모든 자릿수의 합은 1입니다. 10은 1로 나누어 떨어지므로 10은 하샤드 수입니다.
+
+입출력 예 #2   
+- 12의 모든 자릿수의 합은 3입니다. 12는 3으로 나누어 떨어지므로 12는 하샤드 수입니다.
+
+입출력 예 #3    
+- 11의 모든 자릿수의 합은 2입니다. 11은 2로 나누어 떨어지지 않으므로 11는 하샤드 수가 아닙니다.
+
+입출력 예 #4    
+- 13의 모든 자릿수의 합은 4입니다. 13은 4로 나누어 떨어지지 않으므로 13은 하샤드 수가 아닙니다.   
+
+## 2. 내 코드 
+
+```
+class Solution {
+    public boolean solution(int x) {
+        boolean answer = true;
+        int a = x;
+        int sum = 0;
+        while(a!=0) {
+            sum += a % 10;
+            a /= 10;
+        }  
+        if(x % sum != 0)
+            answer = false;
+        return answer;
+    }
+}
+```
+  
+###### n이 0이 되기전까지 계속 10으로 나누어 나머지로 각 자릿수를 구한다.    
+
+
+  
+## 3. 베스트 답안지
+
+##### (Integer.parseInt를 이용한  답안지)
+
+```
+public class HarshadNumber{
+    public boolean isHarshad(int num){
+
+    String[] temp = String.valueOf(num).split("");
+
+    int sum = 0;
+    for (String s : temp) {
+        sum += Integer.parseInt(s);
+    }
+
+    if (num % sum == 0) {
+            return true;
+    } else {
+      return false;
+    }
+    }
+
+       // 아래는 테스트로 출력해 보기 위한 코드입니다.
+    public static void  main(String[] args){
+        HarshadNumber sn = new HarshadNumber();
+        System.out.println(sn.isHarshad(18));
+    }
+}
+```
+
+
+## 4. 보완
+
+#### Integer.parseInt()란?   
+
+이전에 봤던 **charAt()**은 String타입의 문자열에서 우리가 원하는 단어만 뽑아와서 **char타입으로** 변환시켜주는 명령어였다.   
+하지만 먼저 **parseInt()**의 기능은 **String타입의 숫자를 int타입으로** 변환해주는 녀석이다.
+
+int뿐만 아니라 byte, short, long, float, double 등 숫자와 관련된 타입은 전부 가능하다.
+각각<br>
+> Byte.parseByte();<br>
+> Short.parseShort();<br>
+> Integer.parseInt();<br>
+> Long.parseLong();<br>
+> Float.parseFloat();<br>
+> Double.parseDouble();<br>
+로 존재하고 있다.
+<span style="color:red">(char는 parseChar()가 아니라 이 전에 알아봤던 charAt()이라는 녀석으로 존재하고 있다.)</span>       
+
+######결국 spilt() 매소드로 문자열을 배열에 하나씩 문자로 쪼개 넣고  
+######문자를 숫자로 바꾸어 합하는 방식이다.   
+
+
+#######단, parseInt()는 String타입의 문자열이 무조건 숫자로만 이루어져 있어야 사용할 수 있다!!  
+#######a123과 같이 문자가 섞여있다면 변환이 불가능하고 에러를 발생시킨다.   
