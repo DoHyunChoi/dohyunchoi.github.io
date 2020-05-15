@@ -5,7 +5,7 @@ description:
 headline:
 modified: 2020-05-03
 category: Java, Kakao
-tags: [Programming], [Kakao]
+tags: [Programming,kakao]
 imagefeature:
 mathjax:
 chart: true
