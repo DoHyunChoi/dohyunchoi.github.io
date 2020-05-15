@@ -4,7 +4,7 @@ title: "프로그래머스 코딩테스트 Level 1 문제<br>2018 카카오 blin
 description: 
 headline:
 modified: 2020-05-03
-category: Java, Kakao
+category: Java
 tags: [Programming,kakao]
 imagefeature:
 mathjax:
@@ -111,35 +111,37 @@ class Solution {
 ```
 
 ##### 실행결과   
-<img src="{{ site.url }}/images/kakaosecret.jpg">  
+<img src="{{ site.url }}/images/secretmapresult.jpg">  
 
 <br>
-## 4. 보완
+## 4. 보완   
 
-#### Integer.parseInt()란?   
+#### Integer.toBinaryString란?   
 
-이전에 봤던 **charAt()**은 String타입의 문자열에서 우리가 원하는 단어만 뽑아와서 **char타입으로** 변환시켜주는 명령어였다.   
-하지만 먼저 **parseInt()**의 기능은 **String타입의 숫자를 int타입으로** 변환해주는 녀석이다.
+Integer.toBinaryString(int i)는 정수 i를 2진수로 바꿔주는 함수로서 **String** 값으로 반한된다. 
+추가적으로 ##### Integer.parseInt(String s, int n)이란 함수가 있는데 이 함수는 **Int** 값으로 반환을 해준다.   
+(이 함수를 알았더라면 더 빨리 정답에 접근할 수 있었을것 같다.)  
 
-int뿐만 아니라 byte, short, long, float, double 등 숫자와 관련된 타입은 전부 가능하다.
-각각<br>
-> Byte.parseByte();<br>
-> Short.parseShort();<br>
-> Integer.parseInt();<br>
-> Long.parseLong();<br>
-> Float.parseFloat();<br>
-> Double.parseDouble();<br>
-로 존재하고 있다.<br><br>
+#### String.format란?   
+
+- 예) **String.format("%05d", 11);**      
+위의 코드에서 **%02d**을 설명하면 다음과 같다.   
+%: 명령 시작을 의미   
+0: 채워질 문자   
+5: 총 자리수 **(반드시 자연수여야 한다!, 변수X)**   
+d: 십진수로 된 정수   
+
+그러므로 11은 이진수로 00111 로 출력이 된다.   
+
+하지만 답안에서는 **String.format("%" + n + "s", result[i]);** 로 쓰였는데,   
+변수로 쓰고 싶은 경우는 이렇게 쓰면 된다.   
 
 
-<span style="color:red"> (char는 parseChar()가 아니라 이 전에 알아봤던 charAt()이라는 녀석으로 존재하고 있다.)</span>       
+#### arr1[i] | arr2[i]
+"|" 기호는 A와B 둘 중 하나라도 true이면 결과는 true를 의미한다.  
+또한 "^" 기호는 A와 B가 달라야 true를 출력하는 XOR 연산자이다.   
 
-##### 결국 spilt() 매소드로 문자열을 배열에 하나씩 문자로 쪼개 넣고  
-##### 문자를 숫자로 바꾸어 합하는 방식이다.   
-
-
-##### 단, parseInt()는 String타입의 문자열이 무조건 숫자로만 이루어져 있어야 사용할 수 있다!!  
-##### a123과 같이 문자가 섞여있다면 변환이 불가능하고 에러를 발생시킨다.   
+"|"와 "||"의 차이는 "|"는 논리 OR 연산을 비트단위로 하는 비트연산자이다.  
 
 보완설명은 아래 출처를 통해 작성하였다.
-출처: [5.Integer.parseInt(String 타입 값] (https://colossus-java-practice.tistory.com/32)   
+출처: [[java]자바 진수변환(10진수-> 2진수,8진수,16진수)] (https://dpdpwl.tistory.com/92)     
