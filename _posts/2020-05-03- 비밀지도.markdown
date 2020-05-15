@@ -1,0 +1,145 @@
+---
+layout: post
+title: "프로그래머스 코딩테스트 Level 1 문제<br>2018 카카오 blind test - 비밀지도"     
+description: 
+headline:
+modified: 2020-05-03
+category: Java, Kakao
+tags: [Programming], [Kakao]
+imagefeature:
+mathjax:
+chart: true
+comments: true
+featured: true
+---
+
+
+## 1. 문제
+
+네오는 평소 프로도가 비상금을 숨겨놓는 장소를 알려줄 비밀지도를 손에 넣었다. 그런데 이 비밀지도는 숫자로 암호화되어 있어 위치를 확인하기 위해서는 암호를 해독해야 한다. 다행히 지도 암호를 해독할 방법을 적어놓은 메모도 함께 발견했다.
+
+지도는 한 변의 길이가 n인 정사각형 배열 형태로, 각 칸은 공백(" ) 또는벽(#") 두 종류로 이루어져 있다.
+전체 지도는 두 장의 지도를 겹쳐서 얻을 수 있다. 각각 지도 1과 지도 2라고 하자. 지도 1 또는 지도 2 중 어느 하나라도 벽인 부분은 전체 지도에서도 벽이다. 지도 1과 지도 2에서 모두 공백인 부분은 전체 지도에서도 공백이다.
+지도 1과 지도 2는 각각 정수 배열로 암호화되어 있다.
+암호화된 배열은 지도의 각 가로줄에서 벽 부분을 1, 공백 부분을 0으로 부호화했을 때 얻어지는 이진수에 해당하는 값의 배열이다.
+
+입출력 예<br>
+<img src="{{ site.url }}/images/kakaosecret.jpg">  
+<br>
+
+## 2. 내 코드 
+
+```
+class Solution {
+	public static String[] solution(int n, int[] arr1, int[] arr2) {
+        String[][] secretmap = new String[n][n];
+		    String[] answer = new String[n];
+        int[][] map1 = new int[n][n];
+        int[][] map2 = new int[n][n]; 
+        //초기화
+        for(int i=0; i<n; i++) 
+        	for(int j=0; j<n; j++)
+        		map1[i][j]=0;
+        for(int i=0; i<n; i++) 
+        	for(int j=0; j<n; j++)
+        		map2[i][j]=0;
+        for(int i=0; i<n; i++) 
+        	answer[i]= "";
+        //소인수분해
+        for(int i=0; i<n; i++) {
+        	for(int j=n-1; j>=0; j--) {
+        		map1[i][j] = arr1[i] %2;
+        		arr1[i]/= 2;
+        		}
+         }
+        for(int i=0; i<n; i++) {
+        	for(int j=n-1; j>=0; j--) {
+        		map2[i][j] = arr2[i] %2;
+        		arr2[i]/= 2;
+        		}
+         }
+        //더해서 0이상이면 #으로 대체
+        for(int i=0; i<n; i++){
+        	for(int j =0; j<n; j++) {
+        		if(map1[i][j] + map2[i][j] > 0) {
+        			secretmap[i][j] = "#";
+        			}
+        		else
+        			secretmap[i][j] = " ";
+        	}
+        }
+
+        for(int i=0; i<n; i++) {
+        	for(int j=0; j<n; j++)
+        	answer[i] += secretmap[i][j];
+        }
+        for(int i=0; i<n; i++) {
+        		System.out.print(answer[i]+"");
+        		System.out.println();
+        	}
+        
+        return answer;
+    }
+}
+```
+  
+###### 매소드를 사용하지 않고 직접 소인수분해하여 int[][] 2차원 배열에 대입하여 계산하였다. 불필요하게 많은 배열을 생성한 것 같아 보완이 필요해보인다.    
+
+<br>
+  
+## 3. 베스트 답안지
+
+##### (Integer.toBinaryString()와 String.format(,)을 이용한  답안지)
+
+```
+class Solution {
+  public String[] solution(int n, int[] arr1, int[] arr2) {
+        String[] result = new String[n];
+        for (int i = 0; i < n; i++) {
+            result[i] = Integer.toBinaryString(arr1[i] | arr2[i]);
+        }
+
+        for (int i = 0; i < n; i++) {
+            result[i] = String.format("%" + n + "s", result[i]);
+            result[i] = result[i].replaceAll("1", "#");
+            result[i] = result[i].replaceAll("0", " ");
+        }
+
+        return result;
+    }
+}
+```
+
+##### 실행결과   
+<img src="{{ site.url }}/images/kakaosecret.jpg">  
+
+<br>
+## 4. 보완
+
+#### Integer.parseInt()란?   
+
+이전에 봤던 **charAt()**은 String타입의 문자열에서 우리가 원하는 단어만 뽑아와서 **char타입으로** 변환시켜주는 명령어였다.   
+하지만 먼저 **parseInt()**의 기능은 **String타입의 숫자를 int타입으로** 변환해주는 녀석이다.
+
+int뿐만 아니라 byte, short, long, float, double 등 숫자와 관련된 타입은 전부 가능하다.
+각각<br>
+> Byte.parseByte();<br>
+> Short.parseShort();<br>
+> Integer.parseInt();<br>
+> Long.parseLong();<br>
+> Float.parseFloat();<br>
+> Double.parseDouble();<br>
+로 존재하고 있다.<br><br>
+
+
+<span style="color:red"> (char는 parseChar()가 아니라 이 전에 알아봤던 charAt()이라는 녀석으로 존재하고 있다.)</span>       
+
+##### 결국 spilt() 매소드로 문자열을 배열에 하나씩 문자로 쪼개 넣고  
+##### 문자를 숫자로 바꾸어 합하는 방식이다.   
+
+
+##### 단, parseInt()는 String타입의 문자열이 무조건 숫자로만 이루어져 있어야 사용할 수 있다!!  
+##### a123과 같이 문자가 섞여있다면 변환이 불가능하고 에러를 발생시킨다.   
+
+보완설명은 아래 출처를 통해 작성하였다.
+출처: [5.Integer.parseInt(String 타입 값] (https://colossus-java-practice.tistory.com/32)   
