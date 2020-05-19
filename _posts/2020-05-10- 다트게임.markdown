@@ -183,8 +183,8 @@ char형 문자중 정수는 Int형으로 변환시켜주는 유용한 매소드�
 <br>
 ```
 if(dartInt == 1) {
-				if(Character.getNumericValue(dartResult.charAt(i+1)) == 0) {
-					dartInt = 10;
+   if(Character.getNumericValue(dartResult.charAt(i+1)) == 0) {
+      dartInt = 10;
 ```
 <br>
 으로 간단히 대체할 수 있었다.   
