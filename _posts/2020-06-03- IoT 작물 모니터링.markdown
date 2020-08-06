@@ -1,19 +1,17 @@
-
 ---
 layout: post
-title: "IoT 작물 모니터링"     
+title: "IoT 작물 모니터링[인턴십 프로젝트]"     
 description: 
 headline:
-modified: 2020-05-17
+modified: 2020-06-03
 category: Java
-tags: [Project], [Internship]
+tags: [Project]
 imagefeature:
 mathjax:
 chart: true
 comments: true
 featured: true
 ---
-
 
 ## 1. 서비스 개요(Smart Farm)   
 - 사물인터넷(IoT) 기술.<br>
