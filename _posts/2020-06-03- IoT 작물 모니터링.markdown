@@ -16,16 +16,15 @@ featured: true
 ## 1. 서비스 개요(Smart Farm)   
 - 사물인터넷(IoT) 기술.<br>
 - IT와 BT를 결합하여 농산물 대량 생산<br>
-- 이산화탄소, 온도, 습도를 실기산 모니터링<br>
+- 이산화탄소, 온도, 습도를 실시간 모니터링
+- 사용장비 : Ardunio mega 2560보드wifi shield, 아두이노 온습도센서, CO2센서, 서브모터, 안드로이드 휴대폰기기
+<br>
 
 ###### 유사 서비스(K사의 ICT 스마트팜)    
 <img src="{{ site.url }}/images/KT_smartfarm.jpg">  
 <br>
 - ICT 기반 식물공장 통합 운영 플랫폼 및 모니터링 시스템 개발   
 - 식물공장 시스템 녹색기술 인증 및 녹색기술 제품 인증<br>
-
-<img src="{{ site.url }}/images/SmartFarm_method.jpg">  
-<br>
 
 ## 2. 개발방법  
 
@@ -42,10 +41,10 @@ featured: true
 <img src="{{ site.url }}/images/IoT_Thingspeak.jpg">  
 <br>
 
-- 1. 온습도 센서를 아두이노와 연결하여 서버로 전송     
-- 2. Thingspeak 클라우드 서버를 통해 받은 센서 값을 DB에 저장    
-<span style="color:blue">some **- 3. Thingspeak 자체 DB플랫폼 이용하여 시간별 센서 값을 그래프로 변환   ** text</span>  
-- 4. 안드로이드 어플리케이션을 통해 유저인터페이스 제공, 모니터링   
+- 온습도 센서를 아두이노와 연결하여 서버로 전송     
+- Thingspeak 클라우드 서버를 통해 받은 센서 값을 DB에 저장    
+- <span style="color:blue"> **Thingspeak 자체 DB플랫폼 이용하여 시간별 센서 값을 그래프로 변환 **</span>  
+- 안드로이드 어플리케이션을 통해 유저인터페이스 제공, 모니터링   
 <br>
 
 #### 3-1. ThingSpeak란
@@ -61,7 +60,7 @@ featured: true
 <img src="{{ site.url }}/images/SmartFarm_android2.jpg">  
 <br>
 
-#### 4.1 MQTTT 서버 사용(Mqtt.fx, 센서 데이터&그래프)
+#### 4-1 MQTTT 서버 사용(Mqtt.fx, 센서 데이터&그래프)
 <img src="{{ site.url }}/images/SmartFarm_mqtt1.jpg">  
 <br>
 <img src="{{ site.url }}/images/SmartFarm_mqtt2.jpg">  
@@ -110,7 +109,7 @@ if ( mqttClient->connect(CLIENT_ID) )
 
 
 ```
-#### 4.2 ThingSpeak Cloud 사용(ThingView, 센서 데이터&그래프)
+#### 4-2 ThingSpeak Cloud 사용(ThingView, 센서 데이터&그래프)
 <img src="{{ site.url }}/images/SmartFarm_ts1jpg">  
 <img src="{{ site.url }}/images/SmartFarm_ts2.jpg">  
 <img src="{{ site.url }}/images/SmartFarm_ts3.jpg">  
@@ -138,15 +137,19 @@ void updateThingSpeak(float co2, float temp, float humid) {
 
 ```
 <br>
-## 4. 보완   
+## 5. 보완   
 - CO2 센서가 부정확하여 결과값의 차이가 매우 컸다.  
 - 무료 MQTT 서버와 Broker를 통한 지속적인 아두이노 데이터 교환이 어려웠다. 사용자가 많아 서버가 원활하지 못했기 때문이다.   
 <br>
-## 5. 결론   
+## 6. 결론   
 - MQTT뿐만 아니라 Node.js, Node-RED, Apache등 기초적인 서버 구축.
 - MQTT,  Mosquitto등 IoT에 자주 쓰이는 프로토콜과 브로커에 대한 학습
 - JAVA를 기반으로한 ThingSpeak 언어에 대한 학습
 - 기초적인 아두이노  회로뿐만 아니라 와이파이 쉴드를 이용한 고급예제까지 다루어 아두이노에 대한 전문 지식 함양
 - https://github.com/DoHyunChoi/CNM_ROBOTICS_Android https://github.com/DoHyunChoi/CNM_ROBOTICS 에 업로드
 
+<br>
+
+## 7. 동계인턴십발표 포스터   
+<img src="{{ site.url }}/images/internship_poster.jpg">  
 <br>
