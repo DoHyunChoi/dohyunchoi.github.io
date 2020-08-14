@@ -155,4 +155,5 @@ void updateThingSpeak(float co2, float temp, float humid) {
 <br>
 
 ## 8. SW 지식저작권 등록
-- eCube4412와 Arduino를 활용한 TV 제어 프로그램 / 2016.09.12 / 연구원: 
+<img src="{{ site.url }}/images/C2016.jpg">  
+- eCube4412와 Arduino를 활용한 TV 제어 프로그램 / 2016.09.12 / 연구원: 최도현<br>
