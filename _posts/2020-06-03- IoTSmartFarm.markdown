@@ -153,3 +153,6 @@ void updateThingSpeak(float co2, float temp, float humid) {
 ## 7. 동계인턴십발표 포스터   
 <img src="{{ site.url }}/images/internship_poster.jpg">  
 <br>
+
+## 8. SW 지식저작권 등록
+- eCube4412와 Arduino를 활용한 TV 제어 프로그램 / 2016.09.12 / 연구원: 
