@@ -36,10 +36,7 @@ featured: true
 - 시청연령 제한 설정.<br>
 
 ## 2. 개발방법  
-
-<img src="{{ site.url }}/images/SmartFarm_method.jpg">  
 <br>
-
 - 1. 초음파 센서를 아두이노와 연결하여 서버로 전송     
 - 2. 서버를 통해 받은 센서 값을 DB에 저장    
 - 3. 기업과 연계하여 서버로 명령어를 보내 애플리케이션으로 셋탑박스 전원 통제
@@ -48,9 +45,7 @@ featured: true
 <br>
 
 ## 3. 새로 알게된점(ThingSpeak)
-<img src="{{ site.url }}/images/IoT_Thingspeak.jpg">  
 <br>
-
 - 초음파 센서를 아두이노와 연결하여 서버로 전송     
 - 서버를 활용하여 셋탑박스, 카메라 모듈 컨트롤    
 - DB에 데이터 저장
@@ -102,10 +97,11 @@ featured: true
 ###### 핵심코드
 - Github에 업로드: [소스코드]("https://github.com/DoHyunChoi?tab=repositories")
 <br>
-
+<br>
 ## 5. 보완   
 - 초음파 센서가 부정확하여 결과값의 차이가 매우 컸다.  
-- 유료 서버를 사용하여 프로젝트 기간동안만 서비스를 유지할 수 있었다.
+- 유료 서버를 사용하여 프로젝트 기간동안만 서비스를 유지할 수 있었다.<br>
+<br>
 <br>
 ## 6. 결론   
 - 셋탑박스 회사에서 제공해줄 수 있는 기능이 한정적이었지만 직접 기업에 찾아가고 도전하여 완성하였다.
@@ -113,7 +109,7 @@ featured: true
 - 팀원들과 원활한 의사소통으로 문제점이 생길때마다 해결할 수 있었다.
 - 기획부터 개발까지 진행하면서 IoT와 4차산업에 대한 더욱 관심이 생겼다.
 <br>
-
+<br>
 ## 7. Google Play 스토어 애플리케이션 등록
 <img src="{{ site.url }}/images/app_enrolment.jpg">  
 <br>
