@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "IoT 아이 eye [학부 프로젝트]"     
-description: 
+description: [학부 프로젝트]
 headline:
 modified: 2020-06-03
 category: IoT
