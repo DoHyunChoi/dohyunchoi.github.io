@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "IoT 작물 모니터링 [인턴십 프로젝트]"     
+title: "IoT 작물 모니터링" "[인턴십 프로젝트]"     
 description: 
 headline:
 modified: 2020-06-03
@@ -110,7 +110,7 @@ if ( mqttClient->connect(CLIENT_ID) )
 
 ```
 #### 4-2 ThingSpeak Cloud 사용(ThingView, 센서 데이터&그래프)
-<img src="{{ site.url }}/images/SmartFarm_ts1jpg">  
+<img src="{{ site.url }}/images/SmartFarm_ts4.jpg">  
 <img src="{{ site.url }}/images/SmartFarm_ts2.jpg">  
 <img src="{{ site.url }}/images/SmartFarm_ts3.jpg">  
 <br>
@@ -132,7 +132,7 @@ void updateThingSpeak(float co2, float temp, float humid) {
  if (client.connect(thingSpeakAddress, 80) > 0){       
 
       String tsData = "1="+String(co2,DEC)+"&2="+String(temp, DEC)+"&3=" +String(humid,DEC);
-
+    }
 }
 
 ```
@@ -153,7 +153,3 @@ void updateThingSpeak(float co2, float temp, float humid) {
 ## 7. 동계인턴십발표 포스터   
 <img src="{{ site.url }}/images/internship_poster.jpg">  
 <br>
-
-## 8. SW 지식저작권 등록
-<img src="{{ site.url }}/images/C2016.jpg">  
-- eCube4412와 Arduino를 활용한 TV 제어 프로그램 / 2016.09.12 / 연구원: 최도현<br>
