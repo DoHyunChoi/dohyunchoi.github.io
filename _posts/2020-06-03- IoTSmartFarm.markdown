@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "IoT 작물 모니터링","[인턴십 프로젝트]"     
+title: "IoT 작물 모니터링 [인턴십 프로젝트]"     
 description: 
 headline:
 modified: 2020-06-03
